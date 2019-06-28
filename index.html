@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        p,
+        pre {
+            margin-left: 25%;
+            margin-right: 25%;
+            background-color: skyblue;
+            text-align: center;
+        }
+        .tag-info:hover,
+        p:hover {
+            transform: scale(1.4) 
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <h1>Мой первый сайт</h1>
+    <p>Это не первый сайт который я делаю, но он первый в курсе изучения Python на <b>Geekbrains!</b></p>
+    <p>
+        <code>
+            &lt;strong&gtВажный жирный текст&lt;/strong&gt
+        </code>
+        <br>
+        <strong>Важный жирный текст</strong>
+    </p>
+    <p>
+        <code>
+            &lt;b&gtПросто жирный&lt;/b&gt
+        </code>
+        <br>
+        <b>Просто жирный </b>
+    </p>
+    <p>
+        &lt;em>Важный курсив&lt;/em>
+        <br>
+        <em>Важный курсив</em>
+
+    </p>
+    <p>
+        &lt;i>Просто курсив&lt;/i>
+        <br>
+        <i>Просто курсив</i>
+    </p>
+    <p>
+        Размер шрифта &lt;small> меньше на один&lt;/small>
+        <br>
+        Размер шрифта <small> меньше на один</small>
+    </p>
+    <p>
+        Нижний регистр H&lt;sub>2&lt;/sub>O
+        <br>
+        Нижний регистр H<sub>2</sub>O
+    </p>
+    <p>
+        Верхний регистр м&lt;sup>3&lt;/sup>
+        <br>
+        Верхний регистр м<sup>3</sup>
+    </p>
+    <p>
+        Повидимому должен &lt;ins>подчеркивать&lt;/ins>
+        <br>
+        Повидимому должен <ins>подчеркивать</ins>
+    </p>
+    <p>
+        &lt;del>Перечеркивает&lt;/del> текст
+        <br>
+        <del>Перечеркивает</del> текст
+    </p>
+    <p>
+        Чтобы обернуть &lt;code>код&lt;/code>
+    </p>
+
+    <br>
+    <pre class="tag-info" style="
+    text-align: left;">
+&lt;pre>
+    Чтобы 
+        сохранить
+        его 
+        форматирование &lt;/pre></pre>
+
+    <code Python>
+        <pre style="
+    background-color: #9e9e9e94;
+    text-align: left;
+" >
+def product_detail_view(request, id):
+    obj = Product.objects.get(id=id)
+    # context = {
+    # 	'title': obj.title,
+    # 	'description': obj.description
+    # }
+    context = {
+        'object':obj
+    }
+    return render(request, "products/product_detail.html", context)
+        </pre>
+
+    </code>
+
+    <p>
+        Для &lt;q>цитат&lt;/q>
+        <br>
+        Для <q>цитат</q>
+    </p>
+    
+
+
+</body>
+
+</html>
