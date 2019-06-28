@@ -39,3 +39,28 @@ body {
     list-style-image: url(https://minethecoin.com/images/coins/32x32/catcoin.png);
     list-style-position: inside;
 }
+
+.small_input_fields {
+    width: 200px;
+    height: 20px;
+    color: green;
+    font-style: bold;
+}
+
+.big_input_fields {
+    width: 250px;
+    height: 100px;
+    color: blue;
+    font-style: italic;
+}
+
+.product-page-image {
+    border: double grey 5px;
+}
+
+/*
+Странице «Контакты»:
+Задать значения ширины и высоты для полей ввода. 
+Задать стили для текста внутри полей input (цвет текста, размер шрифта и т.д.).
+Следите за тем, чтобы на странице все выглядело гармонично, не выбирайте слишком резких цветов.
+*/
