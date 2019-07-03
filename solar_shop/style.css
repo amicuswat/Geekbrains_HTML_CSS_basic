@@ -1,13 +1,16 @@
 body {
     background-color: #f8f8f8;
 }
-.menu li {
+
+.menu_list {
     font-style: italic;
-    font-size: 20px;
+    font-size: 22px;
     list-style-type: none;
 }
-.menu li a {
+
+.menu_link {
     color: #8B00FF;
+    text-decoration: none;
 }
 
 .short_product_descritpion_head, 
