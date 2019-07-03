@@ -6,14 +6,15 @@ body {
     font-style: italic;
     font-size: 22px;
     list-style-type: none;
+    
 }
 
 .menu_link {
-    color: #8B00FF;
     text-decoration: none;
+    color: #8B00FF;
 }
 
-.short_product_descritpion_head, 
+.short_product_description_head, 
 .product_characteristics_head, 
 .detailed_product_description_head{
     color: black;
@@ -22,7 +23,7 @@ body {
     background-color: #eaeaea;
 }
 
-.short_product_descritpion_text {
+.short_product_description_text {
     color: #707070;
     font-size: 14px;
     font-style: italic;
@@ -59,11 +60,5 @@ body {
 
 .product-page-image {
     border: double grey 5px;
+    width: 350px;
 }
-
-/*
-Странице «Контакты»:
-Задать значения ширины и высоты для полей ввода. 
-Задать стили для текста внутри полей input (цвет текста, размер шрифта и т.д.).
-Следите за тем, чтобы на странице все выглядело гармонично, не выбирайте слишком резких цветов.
-*/
