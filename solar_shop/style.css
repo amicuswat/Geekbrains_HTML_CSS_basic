@@ -45,7 +45,7 @@ body {
 }
 
 .small_input_fields {
-    width: 200px;
+    width: 250px;
     height: 20px;
     color: green;
     font-style: bold;
@@ -59,6 +59,18 @@ body {
 }
 
 .product-page-image {
-    border: double grey 5px;
+    outline: double grey 5px;
     width: 350px;
+}
+
+.page-main-title {}
+
+.input-field-label {
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.contact_us_form {
+    border: 2px solig black;
+    width: 260px;
 }
