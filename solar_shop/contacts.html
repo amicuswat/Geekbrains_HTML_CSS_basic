@@ -8,13 +8,24 @@
 </head>
 
 <body>
-    <nav class="menu">
-        <ul>
-            <li class="menu_list"><a class="menu_link" href="index.html">Главная</a></li>
-            <li class="menu_list"><a class="menu_link" href="catalogue/catalogue.html">Каталог</a></li>
-            <li class="menu_list"><a class="menu_link" href="contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
+   <header>
+    <div>
+        <div class="logo-block">
+<img src="catalogue/images/logo.png" alt="Логотип компании схемотичное солнце" class="logo-image">
+        </div>
+        <div class="menu-block">
+            <nav class="menu">
+                <ul>
+                    <li class="menu_list"><a class="menu_link" href="index.html">Главная</a></li>
+                    <li class="menu_list"><a class="menu_link" href="catalogue/catalogue.html">Каталог</a></li>
+                    <li class="menu_list"><a class="menu_link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    </header>
+
     <hr>
 
     <form action="#" method="get" class="contact_us_form">
@@ -26,13 +37,13 @@
             <br><br>
             <span class="input-field-label">Ваш email</span>
             <br>
-            <input type="email" name="email" placeholder="name@domain.end" class="small_input_fields">
+            <input type="email" name="email" placeholder="name@domain.end" class="small_input_fields email-field">
             <br><br>
-            <span class="input-field-label">Тема</span> 
+            <span class="input-field-label">Тема</span>
             <br>
-            <input type="text" name="topic" placeholder="Тема" class="small_input_fields"> 
+            <input type="text" name="topic" placeholder="Тема" class="small_input_fields">
             <br><br>
-            <span class="input-field-label">Текст</span> 
+            <span class="input-field-label">Текст</span>
             <br>
             <textarea name="" id="" cols="30" rows="10" class="big_input_fields"></textarea> <br>
             <button type="submit" class="submit-button"> Отправить</button>

@@ -14,6 +14,10 @@ body {
     color: #8B00FF;
 }
 
+.menu_link:hover {
+    color: aqua;
+}
+
 .short_product_description_head, 
 .product_characteristics_head, 
 .detailed_product_description_head{
@@ -74,3 +78,12 @@ body {
     border: 2px solig black;
     width: 260px;
 }
+
+.logo-image {
+    width: 70px;
+}
+
+.email-field:focus {
+    color: orange;
+}
+
