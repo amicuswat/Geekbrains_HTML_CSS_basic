@@ -83,7 +83,7 @@ body {
     width: 70px;
 }
 
-.email-field:focus {
+.email-block:focus {
     color: orange;
 }
 
