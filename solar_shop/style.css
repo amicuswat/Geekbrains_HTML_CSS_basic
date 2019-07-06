@@ -87,3 +87,7 @@ body {
     color: orange;
 }
 
+.product-image-list {
+    list-style-type: none;
+}
+
