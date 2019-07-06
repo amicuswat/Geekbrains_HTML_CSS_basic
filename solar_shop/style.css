@@ -63,9 +63,15 @@ body {
 }
 
 .product-page-image {
-    outline: double grey 5px;
+    border: double grey 5px;
     width: 350px;
 }
+
+.product-page-image:hover {
+    border: double transparent 5px;
+    width: 350px;
+}
+
 
 .page-main-title {}
 
@@ -90,4 +96,7 @@ body {
 .product-image-list {
     list-style-type: none;
 }
-
+.footer {
+    background-color: lightgrey;
+    padding-bottom: 10px;
+}
