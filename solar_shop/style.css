@@ -62,6 +62,10 @@ body {
     background-color: #eaeaea;
 }
 
+.product-img-and-text {
+    display: flex;
+    
+}
 
 .short_product_description_text {
     color: #707070;
@@ -112,12 +116,14 @@ body {
 
 .product-page-image {
     border: double grey 5px;
-    width: 350px;
+    width: 300px;
+    margin-right: 20px;
 }
 
 .product-page-image:hover {
     border: double transparent 5px;
-    width: 350px;
+    width: 300px;
+    margin-right: 20px;
 }
 
 
@@ -173,4 +179,19 @@ body {
 
 .name-input {
     text-transform: capitalize;
+}
+
+.button-block {
+    height: 100%;
+    align-self: center; /* не работает не понимаю как сделать, чтобы блок занял во высоте оставшуюся часть и отогнать кнопку вниз блока */ 
+}
+
+.buy-button {
+    width: 100%;
+  
+}
+
+.products-list {
+    display: flex;
+    flex-flow: row wrap;
 }
