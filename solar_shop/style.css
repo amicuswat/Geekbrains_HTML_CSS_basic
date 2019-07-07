@@ -1,12 +1,47 @@
 body {
     background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    width: 600px;
+    align-content: center;
+}
+
+.logo-block {
+    display: flex;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.menu-block {
+    display: flex;
+    align-items: flex-end;
+}
+
+.menu {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
 }
 
 .menu_list {
     font-style: italic;
     font-size: 22px;
     list-style-type: none;
-
+    padding: 0 20px;
+    height: 30px;
 }
 
 .menu_link {
@@ -112,8 +147,10 @@ body {
 }
 
 .footer {
+    display: blex;
     background-color: lightgrey;
     padding-bottom: 10px;
+    align-self: flex-end;
 }
 
 .table-characteristics {
