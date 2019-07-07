@@ -6,7 +6,7 @@ body {
     font-style: italic;
     font-size: 22px;
     list-style-type: none;
-    
+
 }
 
 .menu_link {
@@ -18,9 +18,9 @@ body {
     color: aqua;
 }
 
-.short_product_description_head, 
-.product_characteristics_head, 
-.detailed_product_description_head{
+.short_product_description_head,
+.product_characteristics_head,
+.detailed_product_description_head {
     color: black;
     font-size: 18px;
     font-weight: 400;
@@ -102,13 +102,15 @@ body {
     width: 70px;
 }
 
-.email-block:focus {
-    color: orange;
+.email-field:focus {
+    color: red;
+    background-color: skyblue;
 }
 
 .product-image-list {
     list-style-type: none;
 }
+
 .footer {
     background-color: lightgrey;
     padding-bottom: 10px;
@@ -116,7 +118,6 @@ body {
 
 .table-characteristics {
     border-collapse: collapse;
-   
 }
 
 .table-cell {
@@ -124,11 +125,15 @@ body {
     width: 120px;
     height: 30px;
     text-align: center;
-    font-height: 30px;   
+    font-height: 30px;
 }
 
 .table-characteristics .table-row:first-child .table-cell {
     font-weight: 600;
     height: 60px;
     font-height: 60px;
+}
+
+.name-input {
+    text-transform: capitalize;
 }
