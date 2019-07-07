@@ -27,6 +27,7 @@ body {
     background-color: #eaeaea;
 }
 
+
 .short_product_description_text {
     color: #707070;
     font-size: 14px;
@@ -40,6 +41,18 @@ body {
     font-weight: 400;
     line-height: 24px;
     text-align: left;
+}
+
+.short_product_description_text:first-letter {
+    color: red;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.detailed_product_description_text:first-letter {
+    color: red;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 .product_characteristics_list {
@@ -99,4 +112,23 @@ body {
 .footer {
     background-color: lightgrey;
     padding-bottom: 10px;
+}
+
+.table-characteristics {
+    border-collapse: collapse;
+   
+}
+
+.table-cell {
+    border: 1px solid black;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    font-height: 30px;   
+}
+
+.table-characteristics .table-row:first-child .table-cell {
+    font-weight: 600;
+    height: 60px;
+    font-height: 60px;
 }
