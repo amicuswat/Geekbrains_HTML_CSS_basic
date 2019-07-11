@@ -1,12 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
 body {
     background-color: #f8f8f8;
+    
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    width: 1200px;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ccc;
+    border-bottom: 3px double grey;
+    
+}
+
+.content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.footer {
+    border-top: 3px double darkgrey;
+    background-color: lightgrey;
+    height: 30px;
+    text-align: right;
+    line-height: 30px;
+    padding-right: 10px;
+    
+}
+
+.logo-image {
+    margin-left: 30px;
+    width: 70px;
+    
+}
+
+/* меню */
+
+.menu {
+    display: flex;
+    margin: 40px 30px 0 0;
 }
 
 .menu_list {
     font-style: italic;
     font-size: 22px;
     list-style-type: none;
+    padding: 0 20px;
+    height: 30px;
+    border: 1px solid black;
+}
 
+.menu_list:hover {
+    color: aqua;
+    background-color: #eee;
 }
 
 .menu_link {
@@ -15,7 +76,33 @@ body {
 }
 
 .menu_link:hover {
-    color: aqua;
+     color: mediumvioletred;
+}
+
+/* конец меню */
+
+.heading {
+    text-align: center;
+    padding: 20px;
+}
+
+.products-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-image-list {
+    list-style-type: none;
+    margin: 30px 60px;
+    border: 3px double darkgrey;
+}
+
+.product-image-link {
+    text-decoration: none;
+}
+
+.catalog-product-img {
+    width: 150px;
 }
 
 .short_product_description_head,
@@ -25,14 +112,15 @@ body {
     font-size: 18px;
     font-weight: 400;
     background-color: #eaeaea;
+    overflow: hidden;
 }
-
 
 .short_product_description_text {
     color: #707070;
     font-size: 14px;
     font-style: italic;
     line-height: 16px;
+    overflow: hidden;
 }
 
 .detailed_product_description_text {
@@ -77,16 +165,21 @@ body {
 
 .product-page-image {
     border: double grey 5px;
-    width: 350px;
+    width: 200px;
+    margin-right: 20px;
+    float: left;
 }
 
 .product-page-image:hover {
     border: double transparent 5px;
-    width: 350px;
+    width: 200px;
+    margin-right: 20px;
 }
 
-
-.page-main-title {}
+.product-page-image-link {
+    display: block;
+    float: left;
+}
 
 .input-field-label {
     font-family: sans-serif;
@@ -98,23 +191,14 @@ body {
     width: 260px;
 }
 
-.logo-image {
-    width: 70px;
-}
+
 
 .email-field:focus {
     color: red;
     background-color: skyblue;
 }
 
-.product-image-list {
-    list-style-type: none;
-}
 
-.footer {
-    background-color: lightgrey;
-    padding-bottom: 10px;
-}
 
 .table-characteristics {
     border-collapse: collapse;
@@ -125,13 +209,13 @@ body {
     width: 120px;
     height: 30px;
     text-align: center;
-    font-height: 30px;
+    line-height: 30px;
 }
 
 .table-characteristics .table-row:first-child .table-cell {
     font-weight: 600;
     height: 60px;
-    font-height: 60px;
+    line-height: 60px;
 }
 
 .name-input {
