@@ -145,7 +145,7 @@ a {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .featured-content {
@@ -156,7 +156,7 @@ a {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-   padding: 10px;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -170,8 +170,8 @@ a {
 
 .in-menu-link {
     color: #6c6c6c;
-font-size: 36px;
-font-weight: 700;
+    font-size: 36px;
+    font-weight: 700;
     padding: 0 18px 20px 11px;
     border-bottom: 2px solid #dadada;
 }
@@ -183,31 +183,31 @@ font-weight: 700;
 
 .in-menu-link-active {
     color: #212121;
-font-size: 36px;
-font-weight: 700;
+    font-size: 36px;
+    font-weight: 700;
     border-bottom: 3px solid #212121;
     padding: 0 20px 19px 9px;
 }
 
 
 .explore-all-link {
-font-size: 18px;
-font-weight: 700;
-text-transform: uppercase;
-color: #212121;
-letter-spacing: 3.6px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #212121;
+    letter-spacing: 3.6px;
 }
 
 .featured-h3 {
     color: #212121;
-font-size: 22px;
-font-weight: 700;
+    font-size: 22px;
+    font-weight: 700;
 }
 
 .featured-p {
     color: #6c6c6c;
-font-size: 14px;
-font-weight: 300;
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .featured-navigation {
@@ -226,3 +226,50 @@ font-weight: 300;
 }
 
 
+
+.promo {
+    height: 683px;
+    display: flex;
+
+}
+
+.promo-left {
+    background-image: url(img/promo-img1.png);
+}
+
+.promo-right {
+    background-image: url(img/promo-img.png);
+}
+
+.promo-content {
+    width: 683px;
+    padding-left: 50px;
+
+}
+
+.exclusive-p-decor {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1e88e5;
+    letter-spacing: 1.8px;
+    margin-top: 228px;
+}
+
+.exclusive-h2 {
+    color: #212121;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-top: 18px;
+    margin-bottom: 24px;
+}
+
+.exclusive-p {
+    color: #6c6c6c;
+    font-size: 14px;
+    font-weight: 300;
+    display: block;
+    width: 374px;
+    margin-bottom: 34px;
+}
