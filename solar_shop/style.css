@@ -1,25 +1,34 @@
 body {
     background-color: #f8f8f8;
 }
-.menu li {
+
+.menu_list {
     font-style: italic;
-    font-size: 20px;
+    font-size: 22px;
     list-style-type: none;
+
 }
-.menu li a {
+
+.menu_link {
+    text-decoration: none;
     color: #8B00FF;
 }
 
-.short_product_descritpion_head, 
-.product_characteristics_head, 
-.detailed_product_description_head{
+.menu_link:hover {
+    color: aqua;
+}
+
+.short_product_description_head,
+.product_characteristics_head,
+.detailed_product_description_head {
     color: black;
     font-size: 18px;
     font-weight: 400;
     background-color: #eaeaea;
 }
 
-.short_product_descritpion_text {
+
+.short_product_description_text {
     color: #707070;
     font-size: 14px;
     font-style: italic;
@@ -34,6 +43,18 @@ body {
     text-align: left;
 }
 
+.short_product_description_text:first-letter {
+    color: red;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.detailed_product_description_text:first-letter {
+    color: red;
+    font-size: 22px;
+    font-weight: 600;
+}
+
 .product_characteristics_list {
     color: darkblue;
     list-style-image: url(https://minethecoin.com/images/coins/32x32/catcoin.png);
@@ -41,7 +62,7 @@ body {
 }
 
 .small_input_fields {
-    width: 200px;
+    width: 250px;
     height: 20px;
     color: green;
     font-style: bold;
@@ -56,11 +77,63 @@ body {
 
 .product-page-image {
     border: double grey 5px;
+    width: 350px;
 }
 
-/*
-Странице «Контакты»:
-Задать значения ширины и высоты для полей ввода. 
-Задать стили для текста внутри полей input (цвет текста, размер шрифта и т.д.).
-Следите за тем, чтобы на странице все выглядело гармонично, не выбирайте слишком резких цветов.
-*/
+.product-page-image:hover {
+    border: double transparent 5px;
+    width: 350px;
+}
+
+
+.page-main-title {}
+
+.input-field-label {
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.contact_us_form {
+    border: 2px solig black;
+    width: 260px;
+}
+
+.logo-image {
+    width: 70px;
+}
+
+.email-field:focus {
+    color: red;
+    background-color: skyblue;
+}
+
+.product-image-list {
+    list-style-type: none;
+}
+
+.footer {
+    background-color: lightgrey;
+    padding-bottom: 10px;
+}
+
+.table-characteristics {
+    border-collapse: collapse;
+}
+
+.table-cell {
+    border: 1px solid black;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    font-height: 30px;
+}
+
+.table-characteristics .table-row:first-child .table-cell {
+    font-weight: 600;
+    height: 60px;
+    font-height: 60px;
+}
+
+.name-input {
+    text-transform: capitalize;
+}
