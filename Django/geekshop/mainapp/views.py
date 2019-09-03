@@ -1,50 +1,48 @@
 from django.shortcuts import render
-
-# Create your views here.
-links_menu = [
-    {'href': 'products_all', 'name': 'все'},
-    {'href': 'products_home', 'name': 'дом'},
-    {'href': 'products_office', 'name': 'офис'},
-    {'href': 'products_modern', 'name': 'модерн'},
-    {'href': 'products_classic', 'name': 'классика'},
-]
-
-links_main_menu = [
-    {'href': 'main', 'name': 'Домой'},
-    {'href': 'products_all', 'name': 'Продукты'},
-    {'href': 'contact', 'name': 'Контакты'},
-]
+from django.utils import timezone
+from .models import ProductCategory, Product
 
 
 def main(request):
-    context = {
-        'title': 'Главная',
-        'links_main_menu': links_main_menu,
-    }
-    return render(request, 'index.html', context=context)
+    title = 'главная'
+
+    products = Product.objects.all()[:4]
+
+    content = {'title': title, 'products': products}
+    return render(request, 'mainapp/index.html', content)
 
 
 def products(request):
-    context = {
-        'title': 'Продукты',
-        'links_menu': links_menu,
-        'links_main_menu': links_main_menu,
-        # 'same_products':same_products
-    }
-    return render(request, 'products.html', context=context)
+    title = 'продукты'
+    links_menu = ProductCategory.objects.all()
+    same_products = Product.objects.all()
+
+    content = {'title': title, 'links_menu': links_menu, 'same_products': same_products}
+    return render(request, 'mainapp/products.html', content)
 
 
 def contact(request):
-    context = {
-        'title': 'Контакты',
-        'links_main_menu': links_main_menu,
-    }
-    return render(request, 'contact.html', context=context)
-
-# def test(request):
-#     fruits = ['apple', 'banana', 'mango']
-#     my_user = {
-#         'first_name':'viktor',
-#         'second_name':'Kuryshev'
-#     }
-#     return render(request, 'test.html', context={'fruits':fruits, 'my_user':my_user})
+    title = 'о нас'
+    visit_date = timezone.now()
+    locations = [
+        {
+            'city': 'Москва',
+            'phone': '+7-888-888-8888',
+            'email': 'info@geekshop.ru',
+            'address': 'В пределах МКАД',
+        },
+        {
+            'city': 'Екатеринбург',
+            'phone': '+7-777-777-7777',
+            'email': 'info_yekaterinburg@geekshop.ru',
+            'address': 'Близко к центру',
+        },
+        {
+            'city': 'Владивосток',
+            'phone': '+7-999-999-9999',
+            'email': 'info_vladivostok@geekshop.ru',
+            'address': 'Близко к океану',
+        },
+    ]
+    content = {'title': title, 'visit_date': visit_date, 'locations': locations}
+    return render(request, 'mainapp/contact.html', content)
