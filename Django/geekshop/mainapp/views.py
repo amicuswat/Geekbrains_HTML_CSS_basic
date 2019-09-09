@@ -1,18 +1,20 @@
 from django.shortcuts import render
-from django.utils import timezone
+import datetime
 from .models import ProductCategory, Product
 
 
 def main(request):
     title = 'главная'
 
-    products = Product.objects.all()[:4]
+    products = Product.objects.all()
 
     content = {'title': title, 'products': products}
     return render(request, 'mainapp/index.html', content)
 
 
-def products(request):
+def products(request, pk=None):
+    print(pk)
+
     title = 'продукты'
     links_menu = ProductCategory.objects.all()
     same_products = Product.objects.all()
@@ -23,7 +25,7 @@ def products(request):
 
 def contact(request):
     title = 'о нас'
-    visit_date = timezone.now()
+    visit_date = datetime.datetime.now()
     locations = [
         {
             'city': 'Москва',
