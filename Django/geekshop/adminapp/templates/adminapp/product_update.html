@@ -2,12 +2,14 @@
 {% load staticfiles %}
 
 {% block content %}
+    <div class="new_product_form"></div>
     <form class="form-horizontal" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ update_form.as_p }}
         <input class="form-control" type="submit" value="сохранить">
     </form>
     <button>
-        <a href="{% url 'admin:products' category.pk %}">к списку товаров</a>
+        <a href="{% url 'admin:categories' %}">к списку категорий</a>
     </button>
+    </div>
 {% endblock %}

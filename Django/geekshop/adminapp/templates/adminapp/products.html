@@ -8,7 +8,7 @@
         </button>
         {% for object in objects %}
             <div class="product_record">
-             <img src="/media/{{ object.image|default: 'products_image/default.jpg' }}" alt="{{ object.name }}">
+             <img src="/media/{{ object.image|default:'products_image/default.jpg' }}" alt="{{ object.name }}">
 
             <div class="product_name">
                 {{ object.name|title }}
