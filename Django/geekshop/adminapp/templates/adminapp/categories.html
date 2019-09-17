@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block content %}
-    <div class="categories_list">
+    <div class="categories_list {% if not object.is_active %}not_active{% endif %}"">
         <button class="new_category">
             <a href="{% url 'admin:category_create' %}">новая категория</a>
         </button>
