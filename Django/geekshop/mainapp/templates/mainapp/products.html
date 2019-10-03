@@ -2,52 +2,73 @@
 {% load staticfiles %}
 
 
-{% block menu %}
-    <div class="slider">
-        <div class="header clearfix">
-            <a href="{% url 'main' %}" class="logo"></a>
-            {% include 'mainapp/includes/inc_menu.html' %}
-            <a href="#" class="search"></a>
-            <a href="#" class="basket"></a>
-        </div>
-        <div class="text-slider">
-            <h3 class="green">тенденции</h3>
-            <h3 class="big"> удобные стулья</h3>
-            <p>Новый уровень комфорта. Отличные характеристики.</p>
-            <a href="#" class="button-order">заказать <img src="{% static 'img/arrow.png' %}" alt=""></a>
-        </div>
-        <div class="navi">
-            <a href="#"></a><a href="#"></a><a href="#"></a>
-        </div>
-    </div>
-{% endblock %}
-
-
 {% block content %}
-    <div class="featured">
-        <div class="featured-menu">
-            <a class="active" href="#">Популярные</a><a href="#">Новинки</a>
+    <div class="details">
+        <div class="links clearfix">
+            {% include 'mainapp/includes/inc_categories_menu.html' %}
         </div>
-        <a class="explore" href="#">показать все <img src="{% static 'img/arrow.png' %}" alt=""></a>
-        <div class="clearfix">
-        </div>
-        <div class="tab-content">
-            {% for product in products %}
-                <div class="block">
-                    <a href="#"><img src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
-                        <div class="text">
-                            <img src="{% static 'img/icon-hover.png' %}" alt="img">
-                            <h3>Категория:{{ product.category.name }}</h3>
-                            <h4>Название: {{ product.name }}</h4>
-                            <p>Описание: {{ product.description }} </p>
-                            <p>Цена: {{ product.price }} </p>
-                            <p>На складе: {{ product.quantity }} </p>
-                        </div>
-                    </a>
+
+        <div class="details-products">
+            <div class="details-slider">
+                <div class="slider-product">
+                    <img src="/media/{{ hot_product.image }}" alt="">
                 </div>
-            {% endfor %}
+                <div class="slider-control">
+                    <div class="block">
+                        <a href="#"><img src="/media/{{ hot_product.image }}" alt="">
+                            <div class="text"></div>
+                        </a>
+                    </div>
+                    <div class="block">
+                        <a href="#"><img src="/media/{{ hot_product.image }}" alt="">
+                            <div class="text"></div>
+                        </a>
+                    </div>
+                    <div class="block">
+                        <a href="#"><img src="/media/{{ hot_product.image }}" alt="">
+                            <div class="text"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="description">
+                <h3 class="big-bold">{{ hot_product.name }}</h3>
+                <h3 class="red">горячее предложение</h3>
+                <p class="price"> {{ hot_product.price }} <span>руб</span></p>
+                <a href="#" class="red-button">
+                    заказать <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+                <div class="description-text">
+                   {{ hot_product.description }}
+                </div>
+            </div>
+        </div>
+
+        <div class="related">
+            <div class="title clearfix">
+                <h2>Похожие продукты</h2>
+                <a class="explore" href="#">показать все <img src="/static/img/arrow.png" alt=""></a>
+            </div>
+            <div class="related-products clearfix">
+                {% for product in same_products %}
+                    <div class="block">
+                        <a href="{% url 'products:product' product.pk %}"><img src="/media/{{ product.image }}" alt="{{ product.short_desc }}">
+                            <div class="text">
+                                <img src="/static/img/icon-hover.png" alt="img">
+                                <h3>Категория:{{ product.category.name }}</h3>
+                                <h4>Название: {{ product.name }}</h4>
+                                <p>Описание: {{ product.description }} </p>
+                                <p>Цена: {{ product.price }} </p>
+                                <p>На складе: {{ product.quantity }} </p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 
     <div class="clr"></div>
+
 {% endblock %}
